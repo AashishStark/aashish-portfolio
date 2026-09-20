@@ -1,0 +1,41 @@
+Build and deploy a personal portfolio website for a software engineer transitioning into AI/ML engineering. Positioning line: "Software Engineer → AI/ML Engineer." Overall theme/identity that should tie every section together: "Understanding how things work."
+
+STACK & SETUP
+- Use Next.js (App Router) + TypeScript + Tailwind CSS. Static export, no backend/database needed — all content is static/local (a content.ts or MDX files), no CMS.
+- Fully responsive, dark-mode default with a light-mode toggle.
+- Deploy to Vercel using the Vercel CLI/GitHub integration. Initialize a git repo, push to GitHub, connect to Vercel, and give me the live URL when done.
+- Clean, modern, slightly technical aesthetic — think a well-designed engineering blog, not a generic "Bootstrap resume template." Use a monospace accent font for headings/code snippets and a clean sans-serif for body text. Subtle animations on scroll are fine; nothing gimmicky.
+
+SECTIONS (in this order)
+1. Hero — name, tagline, one-paragraph positioning, buttons for Projects / Resume / GitHub.
+2. Skills — two visually distinct groups: "Currently working with" (professional stack) and "Exploring" (AI/ML stack in progress). Do NOT use skill percentage bars — use tags/pills or a simple grouped list instead.
+3. Featured Projects — project cards (title, one-line description, tech tags, GitHub/demo links, "Read more" linking to a project detail page/section). Support a per-project "status" badge (e.g. "Live", "In Progress", "Planned") since some projects aren't finished yet.
+4. AI Lab — a reverse-chronological list of short dated learning notes/entries (title + 2-4 sentences each). Should read like a devlog, not a blog with hero images.
+5. Technical Journey — a path/timeline layout (NOT a skill-percentage bar) showing progression: Foundation → Machine Learning → Deep Learning → Modern AI → Engineering for AI.
+6. About — career story paragraph plus education line.
+7. Research — small table or list of papers (title, one-line "what I learned", link).
+8. Beyond Code — 3 short cards (Books, Motorcycles, Travel) with a one-line "how does X connect to the 'understanding how things work' theme" framing.
+9. Contact/Footer — email, LinkedIn, GitHub icons/links.
+
+CONTENT
+Use the exact content from the "Aashish — Portfolio Content Package" document I'm pasting below this prompt for every section's copy. Anywhere that document has a `[PLACEHOLDER: ...]` marker, insert clearly visible placeholder text in the UI (e.g. a small "TODO" chip in dev mode, or literal bracketed text) rather than inventing fake details, fake links, fake repo URLs, or fake project statuses. Do not fabricate GitHub links, LinkedIn URLs, dates, or paper citations — leave those as placeholders for me to fill in.
+
+DESIGN CONSTRAINTS
+- No stock photography. Use simple SVG/CSS-based visuals or icon sets (e.g. lucide-react) instead.
+- No skill percentage bars anywhere.
+- No AI-generated-sounding buzzword copy beyond what's provided — use the content as written.
+- Keep the "Currently working with" vs "Exploring" distinction visible — it's intentional, not a gap to hide.
+- Project cards must support a status badge (Live / In Progress / Planned) since 2 of the 6 projects aren't built yet.
+
+DELIVERABLE
+- A working, deployed site at a Vercel URL.
+- The GitHub repo pushed and linked to that Vercel deployment, so future edits are just a `git push` away.
+- A short README explaining how to run it locally and where to edit content (which file holds section copy) so I can update placeholders myself later.
+
+[Paste the full "Aashish — Portfolio Content Package" content from above here before running this prompt.]
+```
+
+A few notes on using this:
+- Antigravity will likely ask for your GitHub/Vercel auth during the build — that's expected, just approve it.
+- Fill in as many `[PLACEHOLDER]` items as you can *before* handing this over — the more real links/repos you give it, the less filler text you'll have to clean up after.
+- The two unbuilt AI projects (Transformer from scratch, RAG system) are deliberately marked "Planned" — don't let the agent invent fake GitHub repos for them. Build those for real later and swap the status badge.
