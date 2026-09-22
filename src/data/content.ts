@@ -82,7 +82,7 @@ export const PORTFOLIO_DATA = {
   meta: {
     siteTitle: "Aashish | Software Engineer → AI/ML Engineer",
     siteDescription:
-      "Software Engineer building toward AI/ML Engineering. Deepening machine learning, Transformers, and GenAI on top of ~3.5 years shipping production enterprise backend systems.",
+      "Software Engineer building toward AI/ML Engineering. Deepening machine learning, Transformers, and GenAI on top of ~3 years shipping production enterprise backend systems.",
     theme: "Understanding how things work",
     positioning: "Software Engineer → AI/ML Engineer",
     availability: "Available for AI/ML & Backend Engineering roles",
@@ -93,14 +93,14 @@ export const PORTFOLIO_DATA = {
     role: "Software Engineer → AI/ML Engineer",
     tagline: "Software Engineer building toward AI/ML Engineering.",
     positioningParagraph:
-      "I work at the intersection of backend engineering and intelligent systems — currently deepening my grasp of machine learning, deep learning, Transformers, and applied GenAI, on top of ~3.5 years building production automation software.",
+      "I work at the intersection of backend engineering and intelligent systems — currently deepening my grasp of machine learning, deep learning, Transformers, and applied GenAI, on top of ~3 years building production automation software.",
     themeQuote: "Theme: Understanding how things work.",
     credibilityBreakdown: "70% technical credibility · 30% personal identity",
     resumeFileName: "Aashish S A Resume.pdf",
     resumeFilePath: "/Aashish S A Resume.pdf",
     githubUrl: "https://github.com/AashishStark",
     stats: [
-      { label: "Production Engineering", value: "~3.5 Years", detail: "AppViewX PKI & Automation" },
+      { label: "Production Engineering", value: "~3 Years", detail: "AppViewX PKI & Automation" },
       { label: "Core Foundation", value: "Java / Spring / K8s", detail: "Distributed Enterprise APIs" },
       { label: "Transition Focus", value: "PyTorch & GenAI", detail: "RAG, Transformers, Embeddings" },
       { label: "Academic Research", value: "2 Papers", detail: "Plant Pathology & YOLO Vision" },
@@ -109,7 +109,7 @@ export const PORTFOLIO_DATA = {
 
   about: {
     leadParagraph:
-      "I'm a software engineer with about 3.5 years of experience, currently at AppViewX as a PKI/Certificate Lifecycle Management Engineer, where I build enterprise integrations (ServiceNow, F5, BlueCat) and customer-facing automation on top of a Certificate Lifecycle Management platform — day-to-day work in Java, Spring Boot, and Kubernetes.",
+      "I'm a software engineer with about 3 years of experience, currently at AppViewX as a PKI/Certificate Lifecycle Management Engineer, where I build enterprise integrations (ServiceNow, F5, BlueCat) and customer-facing automation on top of a Certificate Lifecycle Management platform — day-to-day work in Java, Spring Boot, and Kubernetes.",
     transitionParagraph:
       "My interest in AI goes back to college, where I co-authored two research papers applying ML to real-world problems — plant disease recognition and vehicle pollution detection. That early exposure has turned into a deliberate transition: I'm now working through a structured self-study path covering classical ML, deep learning, Transformers, and GenAI/RAG systems, with the goal of moving into GenAI/ML engineering roles.",
     angleParagraph:
@@ -123,7 +123,7 @@ export const PORTFOLIO_DATA = {
     work: {
       company: "AppViewX",
       role: "PKI / Certificate Lifecycle Management Engineer",
-      tenure: "~3.5 years experience",
+      tenure: "~3 years experience",
       coreStack: ["Java", "Spring Boot", "Spring Security", "Kubernetes", "Docker", "REST APIs"],
       integrations: ["ServiceNow", "F5 BIG-IP", "BlueCat DNS"],
     },
@@ -355,9 +355,7 @@ export const PORTFOLIO_DATA = {
         "A decoder-only Transformer built from pure tensor mathematics to develop an unshakeable mechanical understanding of attention matrices, rotary positional embeddings (RoPE), LayerNorm variants, and feedforward projection blocks.",
       whyItWorks:
         "Building a transformer from scratch demystifies tensor shapes and dimensional routing ($B \\times T \\times C$). Dissecting why scaled dot-product attention divides by $\\sqrt{d_k}$ and how residual streams act as an additive memory bus directly equips an engineer to debug real-world LLM inference bottlenecks.",
-      placeholderNotes: "[PLACEHOLDER: GitHub repo link - deliberately planned as next milestone in DL roadmap]",
-      isPlaceholder: true,
-      placeholderLabel: "TODO: Planned Project (Build & swap status badge)",
+      isPlaceholder: false,
     },
     {
       id: "agentic-rag-eval",
@@ -370,9 +368,7 @@ export const PORTFOLIO_DATA = {
         "A testing and observability framework designed to augment the RAG Notes QA system with automated evaluation loops: measuring context relevance, answer groundedness, and faithfulness across prompt variations.",
       whyItWorks:
         "In production AI, you cannot improve what you do not measure. By comparing golden query-response pairs against cosine similarity cutoffs and semantic faithfulness metrics, this project applies software engineering automated test discipline to non-deterministic LLM systems.",
-      placeholderNotes: "[PLACEHOLDER: GitHub repo link - planned extension for RAG pipeline evaluation]",
-      isPlaceholder: true,
-      placeholderLabel: "TODO: Planned Project (Build & swap status badge)",
+      isPlaceholder: false,
     },
   ] as ProjectItem[],
 
@@ -452,7 +448,7 @@ export const PORTFOLIO_DATA = {
         timeframe: "2020 – 2024",
         skills: ["Java", "Spring Boot", "Kubernetes", "Distributed Systems Basics", "DSA in Java", "REST Architecture"],
         description:
-          "3.5 years building and maintaining enterprise-scale PKI automation platforms at AppViewX. Focused on low-latency REST APIs, transactional integrity, Dockerized container orchestration, and integrations with ServiceNow, F5, and BlueCat.",
+          "~3 years building and maintaining enterprise-scale PKI automation platforms at AppViewX. Focused on low-latency REST APIs, transactional integrity, Dockerized container orchestration, and integrations with ServiceNow, F5, and BlueCat.",
         themeConnection:
           "Understanding how an enterprise system handles thousands of concurrent TLS handshakes and automated certificate rotations without downtime.",
       },
@@ -510,20 +506,20 @@ export const PORTFOLIO_DATA = {
         title: "Plant Disease Recognition with Inception-v3, AlexNet & CNN",
         topics: ["Computer Vision", "Convolutional Neural Networks", "Transfer Learning", "Inception-v3", "AlexNet"],
         whatILearned:
-          "Benchmarked deep convolutional feature extractors against classical architectures on leaf pathology datasets. Explored how factorized 7x7 convolutions in Inception-v3 reduce parameter counts while capturing multi-scale leaf lesion textures.",
-        link: "https://github.com/EKANATHAN-1001/Plant-Disease-with-Inception-v3-Alexnet-CNN",
-        linkText: "View GitHub Repository & Code",
+          "Developed deep learning models (Inception-v3, AlexNet, CNN) predicting conditions like Cotton Healthy Leaf, Tomato Late Blight, and Cedar Apple Rust. Integrated with automated disease explanation and Google Search reference pipelines.",
+        link: "https://github.com/AashishStark/Plant-Disease-with-Inception-v3-Alexnet-CNN",
+        linkText: "View GitHub Repository",
         isPlaceholder: false,
       },
       {
         id: "paper-vehicle-pollution",
         title: "Real-Time Vehicle Pollution Detection and Tracking using Iterative Deep Learning and YOLO",
-        topics: ["Real-time Object Detection", "YOLO", "Deep Learning Tracking", "Iterative Inference"],
+        topics: ["Real-time Object Detection", "YOLOv5", "Deep Learning Tracking", "Iterative Self-Training", "Gemini Vision"],
         whatILearned:
-          "Engineered an iterative vision pipeline utilizing YOLO to identify and track vehicular exhaust plumes under dynamic highway lighting conditions, exploring the trade-off between frame rate latency and detection confidence.",
-        link: "#",
-        linkText: "[PLACEHOLDER: Publication Link / DOI citation]",
-        isPlaceholder: true,
+          "Co-authored a feedback-based iterative deep learning framework detecting polluting vehicles from CCTV/surveillance footage using an 8-model ensemble with majority voting. Built a self-training loop with pseudo-labeling (>90% accuracy, 79.5% zero-shot in synthetic rain/fog) paired with YOLOv5 localization and Gemini AI license-plate extraction logged to Firebase.",
+        link: "https://github.com/AashishStark/Vehicle-Pollution-Detection",
+        linkText: "View GitHub Repository",
+        isPlaceholder: false,
       },
     ] as ResearchPaper[],
   },
@@ -579,9 +575,10 @@ export const PORTFOLIO_DATA = {
     displayPhone: "+91 80725 43573",
     github: "https://github.com/AashishStark",
     githubUsername: "AashishStark",
-    linkedin: "https://linkedin.com/in/placeholder",
-    linkedinPlaceholder: "[PLACEHOLDER: Add your LinkedIn profile URL in src/data/content.ts]",
-    isLinkedinPlaceholder: true,
+    linkedin: "https://www.linkedin.com/in/aashish-s-a-27365621a/",
+    linkedinUsername: "aashish-s-a-27365621a",
+    linkedinPlaceholder: "",
+    isLinkedinPlaceholder: false,
     location: "India",
   },
 };

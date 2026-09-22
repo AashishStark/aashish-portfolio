@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { ArrowDown, FileText, ArrowUpRight, Cpu, Layers, Check, Copy } from "lucide-react";
-import { GithubIcon } from "./SocialIcons";
+import { GithubIcon, LinkedinIcon } from "./SocialIcons";
 import { PORTFOLIO_DATA } from "@/data/content";
 
 export const Hero: React.FC = () => {
@@ -23,50 +23,37 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-grid-slate [mask-image:linear-gradient(to_bottom,white,transparent)] pointer-events-none opacity-40 dark:opacity-25" />
 
       {/* Subtle Glow Orb */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-emerald-500/10 dark:bg-emerald-500/15 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-emerald-500/10 dark:bg-emerald-500/15 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative">
-        {/* Section Index Marker */}
-        <div className="flex items-center gap-2 mb-6">
-          <span className="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold tracking-wider">
-            // 01. HERO
-          </span>
-          <span className="h-px w-8 bg-emerald-500/30" />
-          <span className="font-mono text-[11px] text-slate-700 dark:text-slate-300">
-            {PORTFOLIO_DATA.hero.credibilityBreakdown}
-          </span>
-        </div>
-
-        {/* Identity & Status Tag */}
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-xs font-mono font-medium mb-6">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping inline-block" />
+        {/* Terminal / Status Badge */}
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-300 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xs font-mono text-xs text-slate-700 dark:text-slate-300 mb-8 shadow-2xs">
+          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <span className="text-emerald-700 dark:text-emerald-400 font-semibold">//</span>
           <span>{PORTFOLIO_DATA.hero.role}</span>
         </div>
 
         {/* Main Name & Title */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
           {PORTFOLIO_DATA.hero.name}
-          <span className="text-emerald-500">.</span>
         </h1>
 
-        <p className="text-lg sm:text-xl font-medium font-mono text-slate-700 dark:text-slate-300 mb-6">
+        <p className="text-xl sm:text-2xl font-mono text-emerald-700 dark:text-emerald-300 font-medium mb-6">
           {PORTFOLIO_DATA.hero.tagline}
         </p>
 
         {/* Positioning Paragraph */}
-        <div className="relative pl-4 border-l-2 border-emerald-500/60 dark:border-emerald-500/50 mb-8 max-w-3xl">
-          <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-            {PORTFOLIO_DATA.hero.positioningParagraph}
-          </p>
-        </div>
+        <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300 max-w-2xl leading-relaxed mb-6">
+          {PORTFOLIO_DATA.hero.positioningParagraph}
+        </p>
 
-        {/* Core Theme Identity Banner */}
-        <div className="flex items-center gap-3 p-3 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900/60 text-xs font-mono mb-8 max-w-2xl text-slate-700 dark:text-slate-300">
-          <div className="p-1 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">
+        {/* Identity & Theme Badge */}
+        <div className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/40 max-w-2xl mb-8 flex items-start gap-3">
+          <div className="p-1.5 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5">
             <Cpu className="w-3.5 h-3.5" />
           </div>
-          <div>
-            <span className="font-semibold text-slate-900 dark:text-slate-100">
+          <div className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+            <span className="font-mono font-semibold text-slate-900 dark:text-slate-100">
               Core Theme:{" "}
             </span>
             <span className="italic text-emerald-700 dark:text-emerald-300">
@@ -95,7 +82,19 @@ export const Hero: React.FC = () => {
             title="Download PDF Resume"
           >
             <FileText className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-            <span>Download Resume</span>
+            <span>Resume</span>
+          </a>
+
+          {/* LinkedIn Profile Button */}
+          <a
+            href={PORTFOLIO_DATA.contact.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 font-mono text-sm font-medium transition-all shadow-xs"
+          >
+            <LinkedinIcon className="w-4 h-4 text-blue-500" />
+            <span>LinkedIn</span>
+            <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
           </a>
 
           {/* GitHub Profile Button */}

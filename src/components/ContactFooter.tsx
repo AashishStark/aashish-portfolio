@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { Mail, Phone, Copy, Check, FileText, ArrowUp, Terminal, Sparkles } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./SocialIcons";
 import { PORTFOLIO_DATA } from "@/data/content";
-import { PlaceholderChip } from "./PlaceholderChip";
 
 export const ContactFooter: React.FC = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -46,7 +45,7 @@ export const ContactFooter: React.FC = () => {
         </p>
 
         {/* Contact Action Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-10">
           {/* Email Card */}
           <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 shadow-xs flex flex-col justify-between">
             <div className="flex items-center justify-between mb-2">
@@ -72,7 +71,7 @@ export const ContactFooter: React.FC = () => {
             </div>
             <a
               href={`mailto:${PORTFOLIO_DATA.contact.email}`}
-              className="font-mono text-xs sm:text-sm font-semibold text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 truncate"
+              className="font-mono text-xs font-semibold text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 truncate"
             >
               {PORTFOLIO_DATA.contact.email}
             </a>
@@ -103,14 +102,36 @@ export const ContactFooter: React.FC = () => {
             </div>
             <a
               href={`tel:${PORTFOLIO_DATA.contact.phone}`}
-              className="font-mono text-xs sm:text-sm font-semibold text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400"
+              className="font-mono text-xs font-semibold text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400"
             >
               {PORTFOLIO_DATA.contact.displayPhone}
             </a>
           </div>
 
+          {/* LinkedIn Profile Card */}
+          <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 shadow-xs flex flex-col justify-between">
+            <div className="flex items-center justify-between mb-2">
+              <span className="font-mono text-xs text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                <LinkedinIcon className="w-3.5 h-3.5 text-blue-500" />
+                LinkedIn
+              </span>
+              <span className="text-[11px] font-mono text-blue-600 dark:text-blue-400">
+                Connect
+              </span>
+            </div>
+            <a
+              href={PORTFOLIO_DATA.contact.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-xs font-semibold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 flex items-center justify-between"
+            >
+              <span className="truncate">in/aashish-s-a</span>
+              <span className="text-xs shrink-0 ml-1">↗</span>
+            </a>
+          </div>
+
           {/* GitHub Profile Card */}
-          <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 shadow-xs flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+          <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/70 shadow-xs flex flex-col justify-between">
             <div className="flex items-center justify-between mb-2">
               <span className="font-mono text-xs text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                 <GithubIcon className="w-3.5 h-3.5 text-emerald-500" />
@@ -124,30 +145,12 @@ export const ContactFooter: React.FC = () => {
               href={PORTFOLIO_DATA.contact.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-mono text-xs sm:text-sm font-semibold text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 flex items-center justify-between"
+              className="font-mono text-xs font-semibold text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 flex items-center justify-between"
             >
-              <span>github.com/AashishStark</span>
-              <span className="text-xs">↗</span>
+              <span className="truncate">github.com/AashishStark</span>
+              <span className="text-xs shrink-0 ml-1">↗</span>
             </a>
           </div>
-        </div>
-
-        {/* LinkedIn Placeholder Notice Row */}
-        <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/40 mb-10 flex flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center gap-2.5">
-            <div className="p-1.5 rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400">
-              <LinkedinIcon className="w-4 h-4" />
-            </div>
-            <div>
-              <span className="font-mono text-xs font-semibold text-slate-900 dark:text-white mr-2">
-                LinkedIn Profile
-              </span>
-              <span className="text-xs text-slate-700 dark:text-slate-300 font-mono">
-                {PORTFOLIO_DATA.contact.linkedinPlaceholder}
-              </span>
-            </div>
-          </div>
-          <PlaceholderChip label="TODO: Add LinkedIn URL" />
         </div>
 
         {/* Resume Download Action Banner */}
@@ -161,7 +164,7 @@ export const ContactFooter: React.FC = () => {
                 Aashish S A Resume (PDF)
               </div>
               <div className="text-xs text-slate-700 dark:text-slate-300">
-                Drop your updated &apos;Aashish S A Resume.pdf&apos; in <code className="text-slate-700 dark:text-slate-300">/public</code> to refresh this link at any time.
+                Official resume detailing ~3 years of enterprise backend engineering, AI/ML transitions, and research.
               </div>
             </div>
           </div>

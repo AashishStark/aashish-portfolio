@@ -54,7 +54,7 @@ export const Skills: React.FC = () => {
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
                   {currentlyWorkingWith.title}
                   <span className="inline-block px-2 py-0.5 text-[10px] font-mono bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 rounded">
-                    ~3.5 Years Production
+                    ~3 Years Production
                   </span>
                 </h3>
                 <p className="text-xs text-slate-700 dark:text-slate-300">
